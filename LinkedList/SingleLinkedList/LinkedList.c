@@ -35,4 +35,21 @@ void SLL_AppendNode(Node** Head, Node* NewNode)	//노드 추가
 	}
 }
 
+Node* SLL_GetNodeAt(Node* Head, int Location)		//노드 탐색
+{
+	Node* Current = Head;
 
+	while (Current != NULL && (--Location) >= 0)
+	{
+		Current = Current->NextNode;
+	}
+
+	return Current;
+}
+
+
+void SLL_InsertAfter(Node* Current, Node* NewNode)	//노드 삽입
+{
+	NewNode->NextNode = Current->NextNode;
+	Current->NextNode = NewNode;
+}
