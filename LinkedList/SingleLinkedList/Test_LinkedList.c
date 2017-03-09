@@ -25,9 +25,6 @@ int main(void)
 	NewNode = SLL_CreateNode(120);
 	SLL_AppendNode(&List, NewNode);
 
-	NewNode = SLL_CreateNode(40);
-	SLL_AppendNode(&List, NewNode);
-
 	MyNode = SLL_GetNodeAt(List, i);
 	
 	print_node(List);
